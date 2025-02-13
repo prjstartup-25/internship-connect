@@ -194,48 +194,58 @@
         }
 
         /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            padding: 4rem 5%;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
+.hero {
+    margin-top: 80px;
+    padding: 4rem 5%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 
-        .hero-content {
-            flex: 1;
-        }
+.hero-content {
+    flex: 1;
+}
 
-        .hero-title {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
 
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #666;
-        }
+.hero-image img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
+/* Add these media queries for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 5%;
+    }
 
-        .hero-image img {
-        max-width: 600px;
+    .hero-content {
+        flex: none;
         width: 100%;
-        height: auto;
-        border-radius: 20px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .hero-image img:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    .hero-image {
+        display: none; /* Hide image on mobile */
     }
+
+    .hero-title {
+        font-size: 2.2rem; /* Smaller title on mobile */
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem; /* Smaller subtitle on mobile */
+    }
+}
+
         /* Features Section */
         .features {
             padding: 4rem 5%;
